@@ -1,0 +1,7 @@
+executable image-server
+  main-is: Main.hs
+  hs-source-dirs: app, src
+  build-depends: base >=4.7 && <5,
+                 scotty,
+                 JuicyPixels
+  default-language: Haskell2010

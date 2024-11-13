@@ -1,0 +1,32 @@
+# stack.yaml
+
+resolver: lts-20.0  # Choose the latest LTS version compatible with your Haskell libraries
+
+packages:
+  - .               # Indicates that Stack should look for code in the current directory
+
+extra-deps:
+  - JuicyPixels-3.3.8  # Specify exact versions if needed
+  - scotty-0.12.7
+
+# Set any additional flags for package dependencies, if necessary
+flags: {}
+
+# Specify any extra package repositories here
+extra-package-dbs: []
+
+# Set GHC options for better warnings and optimizations
+ghc-options:
+  "$locals": -Wall -O2
+  "$targets": -Wall -O2
+
+# Paths for project binaries
+local-bin-path: .stack-work/install/x86_64-linux/<resolver>/bin
+
+# Options for the test suite
+test:
+  test-arguments: --color --jobs=1
+
+# Docker integration if needed (optional)
+docker:
+  enable: false
