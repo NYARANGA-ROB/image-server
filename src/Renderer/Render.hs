@@ -2,7 +2,6 @@ module Renderer.Render where
 
 import Codec.Picture
 import DSL.Shape
-
 -- Example function to render a Circle
 drawCircle :: Int -> Int -> PixelRGBA8 -> Image PixelRGBA8
 drawCircle width height color = generateImage pixelRenderer width height
